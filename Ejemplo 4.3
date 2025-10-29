@@ -1,0 +1,26 @@
+Proceso Ejemplo_4_3
+    Definir numero, copiaNumero, sumaCifras, contadorCifras, cifra Como Entero
+	
+    Escribir "Ingrese un número entero: "
+    Leer numero
+	
+    Si numero > 0 Entonces
+        sumaCifras <- 0
+        contadorCifras <- 0
+        copiaNumero <- numero
+		
+        Mientras copiaNumero > 0 Hacer
+            cifra <- copiaNumero % 10
+            sumaCifras <- sumaCifras + cifra
+            copiaNumero <- Trunc(copiaNumero / 10)
+            contadorCifras <- contadorCifras + 1
+        FinMientras
+		
+        Escribir "El número tiene ", contadorCifras, " cifras."
+        Escribir "La suma de sus cifras es: ", sumaCifras
+    SiNo
+        Escribir "El número no es positivo."
+    FinSi
+FinAlgoritmo
+
+	
